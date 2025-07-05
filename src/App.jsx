@@ -98,16 +98,20 @@ export default function App() {
         <Route
           path="/lyric/edit/:id"
           element={
-            <Layout>
-              <EditLyric />
+	    <Layout>
+		<ProtectedRoute>
+		    <EditLyric />
+		</Protectedroute>
             </Layout>
           }
         />
         <Route
           path="/artist/edit/:slug"
           element={
-            <Layout>
-              <EditArtist />
+	    <Layout>
+		<ProtectedRoute>
+		    <EditArtist />
+		</ProtectedRoute>
             </Layout>
           }
         />
