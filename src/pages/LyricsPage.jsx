@@ -64,12 +64,20 @@ export default function LyricsPage() {
         </div>
       )}
 
-      <button
-        onClick={() => setShowTranslation(!showTranslation)}
-        className="mb-4 bg-gray-700 text-white px-3 py-1 rounded"
-      >
-        {showTranslation ? "Hide Translation" : "Show Translation"}
-      </button>
+      <div className="flex items-center gap-2 mb-4">
+	  <button
+	      onClick={() => setShowTranslation(!showTranslation)}
+	      className="bg-gray-700 text-white px-3 py-1 rounded"
+	  >
+	      {showTranslation ? "Hide Translation" : "Show Translation"}
+	  </button>
+
+	  <Link to={`/lyric/edit/${song.id}`}>
+	      <button className="bg-blue-600 text-white px-3 py-1 rounded">
+		  Edit
+	      </button>
+	  </Link>
+      </div>
 
       <div className="space-y-2">
         {lyrics.map((line, index) => (
