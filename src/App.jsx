@@ -101,7 +101,7 @@ export default function App() {
 	    <Layout>
 		<ProtectedRoute>
 		    <EditLyric />
-		</Protectedroute>
+		</ProtectedRoute>
             </Layout>
           }
         />
